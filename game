@@ -1,0 +1,93 @@
+using System.Collections;
+using System.Collections.Generic;
+using System.Collections.Specialized;
+using System.Threading;
+using UnityEngine;
+
+public class game : MonoBehaviour
+{
+    public Transform direction;
+    public Transform direction2;
+    public Transform direction3;
+    public Transform direction4;
+    public Transform direction5;
+    public Transform direction6;
+    public int cer, cer2, workerp = 1;
+
+    // Start is called before the first frame update
+    
+    public void Start()
+    {
+        transform.position = Vector3.MoveTowards(transform.position, direction.position, 100);
+    }
+    public void onClick()
+    {
+        if(cer2 == 1 & cer == 1 )
+        {
+            transform.position = Vector3.MoveTowards(transform.position, direction.position, 100);
+            cer += 1;
+            workerp = 1;
+        }
+        else if(cer2 == 1 & cer == 2)
+        {
+            transform.position = Vector3.MoveTowards(transform.position, direction2.position, 100);
+            cer += 1;
+            workerp = 2;
+        }
+        else if(cer2 == 1 & cer == 3)
+        {
+            transform.position = Vector3.MoveTowards(transform.position, direction3.position, 100);
+            workerp = 3;
+
+
+        }
+        else if (cer2 == 3)
+        {
+            transform.position = Vector3.MoveTowards(transform.position, direction5.position, 100);
+            cer2 -= 1;
+            workerp = 5;
+        }
+        else if (cer2 == 2)
+        {
+            transform.position = Vector3.MoveTowards(transform.position, direction4.position, 100);
+            cer2 -= 1;
+            workerp = 4;
+        }
+    }
+    public void oFFClick()
+    {
+        if (cer2 == 1 & cer == 1)
+        {
+            transform.position = Vector3.MoveTowards(transform.position, direction4.position, 100);
+            cer2 += 1;
+            workerp = 4;
+        }
+        else if (cer2 == 2 & cer == 1)
+        {
+            transform.position = Vector3.MoveTowards(transform.position, direction5.position, 100);
+            cer2 += 1;
+            workerp = 5;
+        }
+        else if(cer2 == 3 & cer == 1)
+        {
+            transform.position = Vector3.MoveTowards(transform.position, direction6.position, 100);
+            workerp = 6;
+
+        }
+        else if (cer == 3)
+        {
+            transform.position = Vector3.MoveTowards(transform.position, direction2.position, 100);
+            workerp = 2;
+            cer -= 1;
+        }
+        else if (cer == 2)
+        {
+            transform.position = Vector3.MoveTowards(transform.position, direction.position, 100);
+            workerp = 1;
+            cer -= 1;
+        }
+
+    }
+
+
+}
