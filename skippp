@@ -1,0 +1,66 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class skipp: MonoBehaviour
+{
+    public GameObject sheraa;
+    public man menn;
+    public game wortt;
+    
+
+    public void Start()
+    {
+        sheraa.SetActive(!sheraa.activeSelf);
+    }
+
+
+    public void onClick()
+    {
+        if (menn.mantp == wortt.workerp)
+        {
+            sheraa.SetActive(!sheraa.activeSelf);
+            if (menn.mamam == 1)
+            {
+                menn.menban1.SetActive(!menn.menban1.activeSelf);
+                sheraa.SetActive(!sheraa.activeSelf);
+                menn.tet = 0;
+            }
+            if (menn.mamam == 2)
+            {
+                menn.menban2.SetActive(!menn.menban2.activeSelf);
+                sheraa.SetActive(!sheraa.activeSelf);
+
+                menn.tet = 0;
+            }
+            if (menn.mamam == 3)
+            {
+                menn.menban3.SetActive(!menn.menban3.activeSelf);
+                sheraa.SetActive(!sheraa.activeSelf);
+
+                menn.tet = 0;
+            }
+            if (menn.mamam == 4)
+            {
+                menn.menban4.SetActive(!menn.menban4.activeSelf);
+                sheraa.SetActive(!sheraa.activeSelf);
+                menn.tet = 0;
+
+            }
+            if (menn.mamam == 5)
+            {
+                menn.menban5.SetActive(!menn.menban5.activeSelf);
+                sheraa.SetActive(!sheraa.activeSelf);
+                menn.tet = 0;
+
+            }
+            if (menn.mamam == 6)
+            {
+                menn.menban6.SetActive(!menn.menban6.activeSelf);
+                sheraa.SetActive(!sheraa.activeSelf);
+                menn.tet = 0;
+            }
+        }
+        
+    }
+}
