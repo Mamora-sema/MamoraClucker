@@ -1,0 +1,74 @@
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Diagnostics.Contracts;
+using UnityEngine;
+using UnityEngine.UI;
+using Random = UnityEngine.Random;
+
+public class man : MonoBehaviour
+{
+    public GameObject menban1;
+    public GameObject menban2;
+    public GameObject menban3;
+    public GameObject menban4;
+    public GameObject menban5;
+    public GameObject menban6;
+
+    public int men;
+    public int mamam;
+    public int tet;
+    public int mantp;
+
+
+
+    void Start()
+    {
+        menban1.SetActive(!menban1.activeSelf);
+        menban2.SetActive(!menban2.activeSelf);
+        menban3.SetActive(!menban3.activeSelf);
+        menban4.SetActive(!menban4.activeSelf);
+        menban5.SetActive(!menban5.activeSelf);
+        menban6.SetActive(!menban6.activeSelf);
+    }
+    void Update()
+    {
+        men = Random.Range(0, 20);
+        if(men >= 15 & tet == 0)
+        {
+            mamam = Random.Range(1, 5);
+            tet = 1;
+            if (mamam == 1)
+            {
+                menban1.SetActive(!menban1.activeSelf);
+                mantp = 1;
+            }
+            if (mamam == 2)
+            {
+                menban2.SetActive(!menban2.activeSelf);
+                mantp = 2;
+            }
+            if (mamam == 3)
+            {
+                menban3.SetActive(!menban3.activeSelf);
+                mantp = 3;
+            }
+            if (mamam == 4)
+            {
+                menban4.SetActive(!menban4.activeSelf);
+                mantp = 4;
+            }
+            if (mamam == 5)
+            {
+                menban5.SetActive(!menban5.activeSelf);
+                mantp = 5;
+            }
+            if (mamam == 6)
+            {
+                menban6.SetActive(!menban6.activeSelf);
+                mantp = 6;
+            }
+        }
+        
+    }
+}
